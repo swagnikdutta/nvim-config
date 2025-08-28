@@ -928,7 +928,7 @@ require('lazy').setup({
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       --
-      -- [Swagnik] Disabling tokyonight, using nightfox (see below)
+      -- [Swagnik] Disabling tokyonight, using different theme (see below)
       -- vim.cmd.colorscheme 'tokyonight-moon'
     end,
   },
@@ -937,7 +937,8 @@ require('lazy').setup({
     'EdenEast/nightfox.nvim',
     priority = 1000,
     config = function()
-      -- function body goes here
+      -- To see all themes: https://github.com/EdenEast/nightfox.nvim
+      -- vim.cmd.colorscheme 'dayfox' -- nightfox, dayfox, dawnfox, duskfox, nordfox, terafox, carbonfox
       vim.cmd.colorscheme 'dayfox'
     end,
   },
