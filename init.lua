@@ -939,7 +939,15 @@ require('lazy').setup({
     config = function()
       -- To see all themes: https://github.com/EdenEast/nightfox.nvim
       -- vim.cmd.colorscheme 'dayfox' -- nightfox, dayfox, dawnfox, duskfox, nordfox, terafox, carbonfox
-      vim.cmd.colorscheme 'dayfox'
+      local hour = tonumber(os.date '%H')
+
+      if hour >= 6 and hour < 18 then
+        -- morning time light theme
+        vim.cmd.colorscheme 'dayfox'
+      else
+        -- evening time dark theme
+        vim.cmd.colorscheme 'nordfox'
+      end
     end,
   },
 
